@@ -1,0 +1,38 @@
+{
+    "root": {
+        "data": {
+            "id": "ct7pr3iqqh40",
+            "created": 1686272611809,
+            "text": "问题梳理"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "ct7prldiyts0",
+                    "created": 1686272650676,
+                    "text": "1. 需要查找很多目录/子目录/子目录下的api.js文件和url.js文件"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "ct7ptkn5fg80",
+                    "created": 1686272805809,
+                    "text": "2. 将其全都迁移到api目录下；api目录的层级是否按照目录的层级，需要考虑一下；"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "ct7ptml0nxs0",
+                    "created": 1686272810034,
+                    "text": "3. 引用需要跟着一起走，若webpack不报错，是否就可认为没问题了"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
