@@ -1,0 +1,162 @@
+{
+    "root": {
+        "data": {
+            "id": "cuuh1xc53z40",
+            "created": 1692240107809,
+            "text": "入参"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cuuh23kbcyo0",
+                    "created": 1692240121364,
+                    "text": "v-model：日期"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cuuh2rk689c0",
+                            "created": 1692240173598,
+                            "text": "placeholder/disabled/clearable/append-to-body/prefix-icon"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cuuh35hvxzc0",
+                            "created": 1692240203935,
+                            "text": "format：展示在输入框的格式，但不同于value"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cuuh3oe054o0",
+                            "created": 1692240245059,
+                            "text": "value-format：value的格式"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cuuh3w8772o0",
+                                    "created": 1692240262122,
+                                    "text": "timestamp",
+                                    "progress": 5
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cuuh3zt7hy80",
+                                    "created": 1692240269923,
+                                    "text": "yyyy-MM-dd",
+                                    "progress": 5
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cuuh7lly7i80",
+                            "created": 1692240552466,
+                            "text": "popper-class"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cuuh6v5lxso0",
+                            "created": 1692240494881,
+                            "text": "type",
+                            "priority": null,
+                            "progress": 1
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cuuh81f0vjc0",
+                                    "created": 1692240586876,
+                                    "text": "element: year/month/date/dates/months/years week/datetime/datetimerange/ daterange/monthrange"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cuuh8bp1m3c0",
+                            "created": 1692240609249,
+                            "text": "picker-options 快捷键"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cuuh8n7dzlk0",
+                            "created": 1692240634303,
+                            "text": "default-value ：可选，选择器打开时默认显示的时间；可被new Date()解析"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cuuh9d8q7s00",
+                            "created": 1692240690980,
+                            "text": "bordered 是否有边框模式，默认true"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cuuh9zhucrk0",
+                            "created": 1692240739421,
+                            "text": "disabledDate 不可选日期"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cuuhxkgejgg0",
+                            "created": 1692242587422,
+                            "text": "startRangeDate"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cuuhxqzl02w0",
+                            "created": 1692242601642,
+                            "text": "endRangeDate"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cuuh6264jw80",
+                    "created": 1692240431786,
+                    "text": "daterange选择器",
+                    "layout_mind_offset": {
+                        "x": 359,
+                        "y": 299
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cuuh6hn5bsw0",
+                            "created": 1692240465468,
+                            "text": "start-placeholder/end-placeholder"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
