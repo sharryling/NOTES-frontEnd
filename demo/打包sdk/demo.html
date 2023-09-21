@@ -9,10 +9,17 @@
 </head>
 <body>
   <div id="app">内容框</div>
+  <!-- <button onclick="toFuncB()">调用funcB</button> -->
   <script>
     console.log('全局', myFunc);
     const { funcA } = myFunc.default
     funcA()
+
+    // function toFuncB() {
+    //   const { funcB } = myFunc.default
+    //   console.log('调用funcB', funcB);
+    //   funcB()
+    // }
   </script>
    <script>
     // AMD

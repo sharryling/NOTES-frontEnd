@@ -8,7 +8,7 @@ module.exports = {
   output: {
     libraryTarget: 'umd',
     path: __dirname + '/dist',
-    filename: 'index.js',
+    filename: '[name].[chunkhash].js',
     library: 'myFunc',
     publicPath: './'
   },
@@ -17,6 +17,9 @@ module.exports = {
   },
   plugins: [],
   optimization: {
-    // minimize: true,
+    // 将业务模块和第三方库进行分割???
+    splitChunks: {
+      chunks: 'all'
+    }
   },
 }
