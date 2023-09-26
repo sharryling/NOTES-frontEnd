@@ -492,6 +492,75 @@ second para:param2
 \$# / $* 见上面的例子
 
 
+### 设置默认变量
+
+#### ${var:-default}
+
+var为空，用default作为返回值。
+var不会被设置，**不改变var值**。
+var不为空，返回var的值。
+
+```bash
+$ echo ${msg}
+
+$ echo ${msg:-hello}
+hello
+$ echo ${msg}
+```
+
+#### ${var:+default}
+
+var为空，无操作。
+var不为空，返回值default。**不改变var值**。
+相当于`${var:-default}`取反？
+
+```bash
+$ unset msg
+$ echo $msg
+
+$ echo ${msg:+world}
+
+$ msg=hello
+$ echo $msg
+hello
+$ echo ${msg:+world}
+world
+$ echo $msg
+```
+
+
+#### ${var:=default}
+var为空，返回值default，同时，设置var值为default，**var被修改**。
+var不为空，返回var的值，不会修改。
+
+```bash
+$ echo $msg
+
+$ echo ${msg:=hello}
+hello
+$ echo ${msg}
+hello
+$ echo ${msg:=world}
+hello
+```
+
+#### ${var:?error_message}
+var为空，打印错误提示error_message。
+var不为空，返回var值。
+
+```bash
+$ echo ${msg}
+# OUTPUT： hello
+$ echo ${msg?'Error: msg is not set! '}
+# OUTPUT： hello
+$ echo ${message}
+
+$ echo ${message?'Error: message is not set! '}
+# OUTPUT： bash: message: Error: message is not set! 
+```
+
+在bash中，中间的’:'可以省略。
+
 ### 用户变量可用来自定义命令行缩写
 例如可以创建命令行的简写：
 ```
@@ -512,3 +581,63 @@ alias gpo-D='git push origin --delete'
 alias gpo='git push origin'
 ```
 此时，在命令行输入`ga`实际是调用了`git add .`
+
+
+## 运算
+
+### if else
+```
+if [ command ];then
+符合该条件执行的语句
+elif [ command ];then
+符合该条件执行的语句
+else
+符合该条件执行的语句
+fi
+```
+
+==注意 if [ 1 -eq 1 ] []前后必须要空格==
+### 数值运算符
+
+注意：数值运算符只是针对数值的比较，如果用来比较的是字符或者字符串则会返回报错“ integer expression expected”
+```
+-eq 等于则为真，如果是对整数进行比较相当于“=”
+
+-ne 不等于则为真，如果是对整数进行比较相当于“!=”
+
+-gt 大于则为真,如果是对整数进行比较相当于“>”
+
+-ge 大于等于则为真,如果是对整数进行比较相当于“>=”
+
+-lt 小于则为真,如果是对整数进行比较相当于“<”
+
+-le 小于等于则为真,如果是对整数进行比较相当于“<=”
+```
+
+
+```bash
+if [ 1 -eq 1 ]; then
+  echo 'eq 1=1'
+fi
+
+if [ 1 -lt 2 ]; then
+  echo 'lt 1<2'
+fi
+```
+
+### 字符串比较符
+```
+=：字符串包含的文本是否一样
+
+== 两个字符串是否相等
+
+>:比较字母的大小，比如var1 > var2,如果var1字母大于var2则返回真
+
+<:和大于相反
+
+!= 两个字符串不相等
+
+-z 空字符串
+
+-n 非空字符串
+```
